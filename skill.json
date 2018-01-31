@@ -5,7 +5,7 @@
         "en-US": {
           "summary": "Find out when the next DIF game is",
           "examplePhrases": [
-            "Alexa open diffen games?"
+            "Alexa open diffen games?",
             "Alexa when is the next game?"
           ],
           "name": "diffen",
