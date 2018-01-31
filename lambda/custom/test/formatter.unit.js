@@ -11,13 +11,40 @@ const constructDifHockeyDate = date => {
   return `TZID="+01:00":20${date}T190000`; // Format for DIF Hockey 2017/2018
 };
 
-const getExpectedDate = date => {
+const _getExpectedDate = date => {
   const datePart = moment(date).format("dddd, MMMM Do,");
   const expected = `on ${datePart} 19:00`;
   return expected;
 };
 
 describe('Formatter', () => {
+  describe('generateSummary', () => {
+    let game;
+
+    before(() => {
+      game = {
+        summary: 'DIF-rubb',
+        dateMsg: '',
+        location: 'hovet'
+      }
+    });
+
+    it('should generate summary for a game today', () => {
+      game.dateMsg = 'today at 19:00';
+      expect(formatter.generateSummary(game)).to.equal('The next game is, DIF-rubb, today at 19:00 at hovet.');
+    });
+
+    it('should generate summary for a game tomorrow', () => {
+      game.dateMsg = 'tomorrow at 19:00';
+      expect(formatter.generateSummary(game)).to.equal('The next game is, DIF-rubb, tomorrow at 19:00 at hovet.');
+    });
+
+    it('should generate summary for a game later this week', () => {
+      game.dateMsg = 'on Monday, January 1st, 19:00';
+      expect(formatter.generateSummary(game)).to.equal('The next game is, DIF-rubb, on Monday, January 1st, 19:00 at hovet.');
+    });
+  });
+
   describe('generateDateMsg', () => {
     let today, tomorrow, thisWeek;
 
@@ -39,12 +66,47 @@ describe('Formatter', () => {
     });
 
     it('should generate msg for later this week', () => {
-      const res = getExpectedDate(moment().add(5, 'days'));
+      const res = _getExpectedDate(moment().add(5, 'days'));
       expect(formatter.generateDateMsg(thisWeek)).to.equal(res);
     });
 
     it('should return Jan 1 for invalid date', () => {
       expect(formatter.generateDateMsg('invalid date')).to.equal('on Monday, January 1st, 19:00');
+    });
+  });
+
+  describe('isSameDay', () => {
+    let today, tomorrow;
+
+    before(() => {
+      today = moment();
+      tomorrow = moment(today).clone().add(1, 'days')
+    });
+
+    it('should return true if it\'s the same day', () => {
+      expect(formatter.isSameDay(today, today)).to.equal(true);
+    });
+
+    it('should return false if it\'s not the same day', () => {
+      expect(formatter.isSameDay(today, tomorrow)).to.equal(false);
+    });
+
+  });
+
+  describe('removeTags', () => {
+    it('should remove short html tags', () => {
+      const str = '<b>diffen</b>';
+      expect(formatter.removeTags(str)).to.equal('diffen');
+    });
+
+    it('should remove long html tags', () => {
+      const str = '<italic>diffen</italic>';
+      expect(formatter.removeTags(str)).to.equal('diffen');
+    });
+
+    it('should return string untouched if there\'s no tags', () => {
+      const str = 'diffen';
+      expect(formatter.removeTags(str)).to.equal(str);
     });
   });
 });

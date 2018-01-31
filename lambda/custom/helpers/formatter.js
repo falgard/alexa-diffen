@@ -6,7 +6,7 @@ const utils = require('util');
 const parser = require('./parser');
 const messages = require('./../messages');
 
-const _isSame = (date, refDate) =>
+const isSameDay = exports.isSameDay = (date, refDate) =>
   date.isSame(refDate, "day")
 
 exports.removeTags = str => {
@@ -18,9 +18,9 @@ exports.removeTags = str => {
 exports.generateSummary = game =>
   utils.format(
     messages.general.GAME_SUMMARY,
-    nextGame.summary,
-    nextGame.dateMsg,
-    nextGame.location + "."
+    game.summary,
+    game.dateMsg,
+    game.location + "."
   )
 
 exports.generateDateMsg = rawDate => {
@@ -28,8 +28,8 @@ exports.generateDateMsg = rawDate => {
   if (gameDay.isValid() === false) return;
 
   const today = new Date();
-  const isToday = _isSame(gameDay, today);
-  const isTomorrow = _isSame(gameDay, moment(today).clone().add(1, 'days'));
+  const isToday = isSameDay(gameDay, today);
+  const isTomorrow = isSameDay(gameDay, moment(today).clone().add(1, 'days'));
 
   if (isToday) {
     return utils.format(messages.date.TODAY, moment(gameDay).format("H:mm"));
