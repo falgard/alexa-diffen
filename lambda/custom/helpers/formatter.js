@@ -7,6 +7,10 @@ const messages = require('./../messages');
 const moment = require('moment');
 const utils = require('util');
 
+const _isSame = (date, refDate) => {
+  return date.isSame(refDate, "day");
+};
+
 exports.removeTags = str => {
   if (str) {
     return str.replace(/<(?:.|\n)*?>/gm, '');
@@ -15,11 +19,11 @@ exports.removeTags = str => {
 
 exports.generateDateMsg = rawDate => {
   const gameDay = moment(parser.parseDatePart(rawDate));
-
   if (gameDay.isValid() === false) return;
 
-  const isToday = gameDay.isSame(new Date(), "day");
-  const isTomorrow = gameDay.add(1, 'days').isSame(new Date(), "day");
+  const today = new Date();
+  const isToday = _isSame(gameDay, today);
+  const isTomorrow = _isSame(gameDay, moment(today).clone().add(1, 'days'));
 
   if (isToday) {
     return utils.format(messages.date.todayMessage, moment(gameDay).format("H:mm"));

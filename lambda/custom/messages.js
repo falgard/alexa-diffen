@@ -6,8 +6,8 @@ exports.general = {
 };
 
 exports.date = {
-  todayMessage: 'today, %s',
-  tomorrowMessage: 'tomorrow, %s',
+  todayMessage: 'today at %s',
+  tomorrowMessage: 'tomorrow at %s',
   thisWeekMessage: 'on %s'
 };
 
