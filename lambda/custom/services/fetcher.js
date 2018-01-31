@@ -1,11 +1,10 @@
 'use strict';
+
 require('babel-polyfill');
-
-const formatter = require('./../helpers/formatter');
-const parser = require('./../helpers/parser');
-
 const ical = require('ical');
 const moment = require('moment');
+const formatter = require('./../helpers/formatter');
+const parser = require('./../helpers/parser');
 
 const URL = 'http://www.difhockey.se/calendar/29/show/dif.ics';
 

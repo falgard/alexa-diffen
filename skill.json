@@ -3,17 +3,24 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "When is the next DIF game",
+          "summary": "Find out when the next DIF game is",
           "examplePhrases": [
-            "Alexa when is the next game?",
-            "Alexa is there a game today?"
+            "Alexa open diffen games?"
+            "Alexa when is the next game?"
           ],
           "name": "diffen",
+          "keywords": [
+            "DIF",
+            "Djurgården",
+            "Djurgarden",
+            "Hockey",
+            "Games"
+          ],
           "description": "Ask Alexa when DIF is playing their next game."
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Diffen Testing Instructions.",
+      "testingInstructions": "Just ask when the next game is.",
       "category": "SPORTS_GAMES",
       "distributionCountries": []
     },

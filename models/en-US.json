@@ -1,9 +1,13 @@
 {
     "interactionModel":{
         "languageModel":{
-            "invocationName":"diffen",
+            "invocationName":"diffen games",
             "types":[],
             "intents":[
+                {
+                "name": "AMAZON.RepeatIntent",
+                "samples": []
+                },
                 {
                   "name": "AMAZON.CancelIntent",
                   "samples": []
@@ -19,11 +23,9 @@
                 {
                     "name":"NextGameIntent",
                     "slots":[
-
                     ],
                     "samples":[
-                        "when is the next game",
-                        "is there a game today"
+                        "when is the next game"
                     ]
                 }
             ]

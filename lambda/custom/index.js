@@ -1,71 +1,83 @@
 'use strict';
-require('babel-polyfill');
 
+require('babel-polyfill');
+const Alexa = require('alexa-sdk');
+const moment = require('moment');
+const utils = require('util');
 const formatter = require('./helpers/formatter');
 const fetcher = require('./services/fetcher');
 const messages = require('./messages');
 
-const Alexa = require('alexa-sdk');
-const moment = require('moment');
-const utils = require('util');
+const APP_ID = 'amzn1.ask.skill.12ce19cd-8072-43e6-982e-343845e0760e';
 
-let output = '';
-
-const _isGameComingWeek = nextGame => {
-  const gameDay = moment(nextGame);
-  const today = moment(new Date())
-  const oneWeek = today.clone().add(1, 'week');
-  return gameDay.isBetween(today, oneWeek, 'day', '[]');
-};
-
-var handlers = {
+const handlers = {
   'LaunchRequest': function () {
-    this.emit('SayHello');
+      this.attributes.speechOutput = messages.general.WELCOME_MESSAGE;
+      this.attributes.repromptSpeech = messages.general.WELCOME_REPROMPT;
+
+      this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+      this.emit(':responseReady');
   },
   'NextGameIntent': function () {
+    const cardTitle = messages.general.DISPLAY_CARD_TITLE;
     fetcher.getGames()
       .then(allGames => fetcher.getNextGame(allGames))
       .then((nextGame) => {
-        if (nextGame && _isGameComingWeek(nextGame.date)) {
-          const summary = utils.format(
-            messages.general.gameSummary,
-            nextGame.summary,
-            nextGame.dateMsg,
-            nextGame.location + "."
-          );
-          output += summary;
-          this.response.speak(output).cardRenderer(messages.general.cardTitle, summary);
+        if (nextGame) {
+          const summary = formatter.generateSummary(nextGame);
+          this.attributes.speechOutput = summary;
+          this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
+          this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+          this.response.cardRenderer(messages.general.DISPLAY_CARD_TITLE, summary);
           this.emit(':responseReady');
         } else {
-          output = messages.error.noGamesMessage;
-          this.response.speak(output);
+          this.attributes.speechOutput = messages.error.NO_GAMES;
+          this.response.speak(speechOutput);
+          this.emit(':responseReady');
         }
+      })
+      .catch(err => {
+        this.attributes.speechOutput = messages.error.NOT_FOUND;
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
+        console.log(`Error: ${err}`);
       });
   },
-  'SessionEndedRequest': function () {
-    console.log('Session ended with reason: ' + this.event.request.reason);
+  'AMAZON.HelpIntent': function () {
+      this.attributes.speechOutput = messages.general.HELP_MESSAGE;
+      this.attributes.repromptSpeech = messages.general.HELP_REPROMPT;
+
+      this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+      this.emit(':responseReady');
+  },
+  'AMAZON.RepeatIntent': function () {
+      this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+      this.emit(':responseReady');
   },
   'AMAZON.StopIntent': function () {
-    this.response.speak('Bye');
-    this.emit(':responseReady');
-  },
-  'AMAZON.HelpIntent': function () {
-    this.response.speak("You can try: 'alexa, diffen' or 'alexa, ask diffen'" +
-            "when the next game is'");
-    this.emit(':responseReady');
+      this.response.speak("Goodbye!");
+      this.emit(':responseReady');
   },
   'AMAZON.CancelIntent': function () {
-    this.response.speak('Bye');
-    this.emit(':responseReady');
+      this.response.speak("Goodbye!");
+      this.emit(':responseReady');
+  },
+  'SessionEndedRequest': function () {
+      console.log(`Session ended: ${this.event.request.reason}`);
   },
   'Unhandled': function () {
-    this.response.speak("Sorry, I didn't get that. You can try: 'alexa, diffen'" +
-            " or 'alexa, ask diffen when the next game is'");
-  }
+      this.attributes.speechOutput = messages.general.HELP_MESSAGE;
+      this.attributes.repromptSpeech = messages.general.HELP_REPROMPT;
+      this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+      this.emit(':responseReady');
+  },
+
 };
 
 exports.handler = function (event, context) {
   const alexa = Alexa.handler(event, context);
+  alexa.APP_ID = APP_ID;
+
   alexa.registerHandlers(handlers);
   alexa.execute();
 };
