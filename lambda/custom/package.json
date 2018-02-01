@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "chai": "*",
-    "mocha": "*"
+    "mocha": "*",
+    "nyc": "^11.4.1"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha",
-    "test:unit": "npm run test ./**/*.unit.js"
+    "test": "node_modules/.bin/nyc --cache false node_modules/.bin/mocha"
   }
 }
