@@ -6,6 +6,7 @@ const expect = chai.expect;
 const moment = require('moment');
 
 const parser = require('.././helpers/parser');
+const messages = require('./../../globals/messages');
 
 describe('Parser', () => {
   describe('isSameDay', () => {
@@ -33,7 +34,7 @@ describe('Parser', () => {
 
     it('should return default date if there\'s no valid date in the string', () => {
       const rawDate = 'TZID="Jan 31 2018';
-      expect(parser.parseDatePart(rawDate)).to.equal('20180101T190000');
+      expect(parser.parseDatePart.bind(rawDate)).to.throw(messages.error.INVALID_DATE);
     });
   });
 
@@ -48,15 +49,11 @@ describe('Parser', () => {
     });
 
     it('should return a default date if input is invalid', () => {
-      const res = parser.parseGameDate('123456');
-      expect(res.format()).to.equal(moment('20180101T190000').format());
-      expect(res.isValid()).to.equal(true);
+      expect(parser.parseGameDate.bind('123456')).to.throw(messages.error.INVALID_DATE);
     });
 
     it('should return default date if input isn\'t a valid string', () => {
-      const res = parser.parseGameDate(null);
-      expect(res.format()).to.equal(moment('20180101T190000').format());
-      expect(res.isValid()).to.equal(true);
+      expect(parser.parseGameDate.bind(null)).to.throw(messages.error.INVALID_DATE);
     });
   });
 });

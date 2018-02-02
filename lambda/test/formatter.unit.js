@@ -71,8 +71,8 @@ describe('Formatter', () => {
       expect(formatter.generateDateMsg(thisWeek)).to.equal(res);
     });
 
-    it('should return Jan 1 for invalid date', () => {
-      expect(formatter.generateDateMsg('invalid date')).to.equal(messages.error.INVALID_DATE);
+    it('should throw invalid date error for invalid input', () => {
+      expect(formatter.generateDateMsg.bind('123456')).to.throw(messages.error.INVALID_DATE);
     });
   });
 

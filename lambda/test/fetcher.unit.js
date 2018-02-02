@@ -30,11 +30,11 @@ describe('Fetcher', () => {
     });
 
     it('should throw error if there\'s no games', () => {
-      expect(fetcher.getNextGame.bind([])).to.throw(messages.error.NOT_FOUND);
+      expect(fetcher.getNextGame.bind([])).to.throw(messages.error.NO_GAMES);
     });
 
     it('should throw error if there\'s no input', () => {
-      expect(fetcher.getNextGame.bind(null)).to.throw(messages.error.NOT_FOUND);
+      expect(fetcher.getNextGame.bind(null)).to.throw(messages.error.NO_GAMES);
     });
   });
 
