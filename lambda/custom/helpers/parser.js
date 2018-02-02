@@ -2,15 +2,15 @@
 
 require('babel-polyfill');
 const moment = require('moment');
+const settings = require('./../settings');
 
-const parseDatePart = exports.parseDatePart = rawDate => {
-  if (typeof rawDate !== 'string') return "20180101T190000";
+const parseDatePart = rawDate => {
   const date = rawDate.toString().match(/[\d/-]+[T][\d/:]+/g);
   if (date && date.length > 0) return date[0];
-  return "20180101T190000";
+  return settings.values.DEFAULT_DATE;
 };
 
-exports.parseGameDate = rawDate => {
-  const date = moment(parseDatePart(rawDate));
-  return date.isValid() ? date : moment(new Date());
-};
+const parseGameDate = rawDate =>
+  moment(typeof rawDate === 'string' ? parseDatePart(rawDate) : settings.values.DEFAULT_DATE)
+
+module.exports = {parseDatePart, parseGameDate};

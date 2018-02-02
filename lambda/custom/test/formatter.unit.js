@@ -6,6 +6,7 @@ const expect = chai.expect;
 const moment = require('moment');
 
 const formatter = require('.././helpers/formatter');
+const messages = require('./../messages');
 
 const constructDifHockeyDate = date => {
   return `TZID="+01:00":20${date}T190000`; // Format for DIF Hockey 2017/2018
@@ -71,7 +72,7 @@ describe('Formatter', () => {
     });
 
     it('should return Jan 1 for invalid date', () => {
-      expect(formatter.generateDateMsg('invalid date')).to.equal('on Monday, January 1st, 19:00');
+      expect(formatter.generateDateMsg('invalid date')).to.equal(messages.error.INVALID_DATE);
     });
   });
 
@@ -107,6 +108,11 @@ describe('Formatter', () => {
     it('should return string untouched if there\'s no tags', () => {
       const str = 'diffen';
       expect(formatter.removeTags(str)).to.equal(str);
+    });
+
+    it('should return input if it\'s not a string', () => {
+      const input = null;
+      expect(formatter.removeTags(input)).to.equal(input);
     });
   });
 });

@@ -5,7 +5,7 @@ exports.general = {
   DISPLAY_CARD_TITLE: 'Diffen games',
   HELP_MESSAGE: "You can ask questions such as, when\'s the next game, or, you can say exit...Now, what can I help you with?",
   HELP_REPROMPT: "You can say things like, when\'s the next game, or you can say exit...Now, what can I help you with?",
-  STOP_MESSAGE: 'Goodbye!',
+  STOP_MESSAGE: 'Heja Diffen!',
   REPEAT_MESSAGE: 'Try saying repeat.',
   NOT_FOUND_REPROMPT: 'What else can I help with?',
   GAME_SUMMARY: 'The next game is, %s, %s at %s'
@@ -20,4 +20,5 @@ exports.date = {
 exports.error = {
   NO_GAMES: 'There are no games this week',
   NOT_FOUND: 'Ops, something went wrong, couldn\'t find any games',
+  INVALID_DATE: 'Invalid date'
 };

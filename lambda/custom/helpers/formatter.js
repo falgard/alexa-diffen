@@ -5,17 +5,15 @@ const moment = require('moment');
 const utils = require('util');
 const parser = require('./parser');
 const messages = require('./../messages');
+const settings = require('./../settings');
 
-const isSameDay = exports.isSameDay = (date, refDate) =>
+const isSameDay = (date, refDate) =>
   date.isSame(refDate, "day")
 
-exports.removeTags = str => {
-  if (str) {
-    return str.replace(/<(?:.|\n)*?>/gm, '');
-  }
-};
+const removeTags = str =>
+  str ? str.replace(/<(?:.|\n)*?>/gm, '') : str
 
-exports.generateSummary = game =>
+const generateSummary = game =>
   utils.format(
     messages.general.GAME_SUMMARY,
     game.summary,
@@ -23,9 +21,9 @@ exports.generateSummary = game =>
     game.location + "."
   )
 
-exports.generateDateMsg = rawDate => {
+const generateDateMsg = rawDate => {
   const gameDay = moment(parser.parseDatePart(rawDate));
-  if (gameDay.isValid() === false) return;
+  if (gameDay.isSame(moment(settings.values.DEFAULT_DATE))) return messages.error.INVALID_DATE;
 
   const today = new Date();
   const isToday = isSameDay(gameDay, today);
@@ -39,3 +37,5 @@ exports.generateDateMsg = rawDate => {
 
   return utils.format(messages.date.THIS_WEEK, moment(gameDay).format("dddd, MMMM Do, H:mm"));
 };
+
+module.exports = {isSameDay, removeTags, generateSummary, generateDateMsg};
