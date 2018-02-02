@@ -46,6 +46,18 @@ describe('Formatter', () => {
     });
   });
 
+  describe('shortenLocation', () => {
+    it('should return string as is if no comma is present', () => {
+      const str = 'Hovet';
+      expect(formatter.shortenLocation(str)).to.equal('Hovet');
+    });
+
+    it('should remove address part from location', () => {
+      const str = 'Tele 2 Arena, Arenaslingan 14, 121 77 Johanneshov';
+      expect(formatter.shortenLocation(str)).to.equal('Tele 2 Arena');
+    });
+  });
+
   describe('generateDateMsg', () => {
     let today, tomorrow, thisWeek;
 

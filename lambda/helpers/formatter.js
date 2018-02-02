@@ -10,6 +10,9 @@ const settings = require('./../../globals/settings');
 const removeTags = str =>
   str ? str.replace(/<(?:.|\n)*?>/gm, '') : str
 
+const shortenLocation = fullLocation =>
+  fullLocation.split(',')[0]
+  
 const generateSummary = game =>
   utils.format(
     messages.general.GAME_SUMMARY,
@@ -39,4 +42,4 @@ const generateDateMsg = rawDate => {
   return utils.format(messages.date.THIS_WEEK, moment(gameDay).format("dddd, MMMM Do, H:mm"));
 };
 
-module.exports = {removeTags, generateSummary, generateDateMsg};
+module.exports = {generateDateMsg, generateSummary, removeTags, shortenLocation};

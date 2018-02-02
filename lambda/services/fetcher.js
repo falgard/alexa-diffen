@@ -42,7 +42,6 @@ const getGames = url => {
   return new Promise((resolve, reject) => {
     fetchFromUrl(url)
       .then(data => {
-        console.log('stub!');
         if (typeof(data) === 'undefined' || parser.isEmptyObject(data)) {
           throw new Error(messages.error.NOT_FOUND);
         }
@@ -52,14 +51,16 @@ const getGames = url => {
           if (data.hasOwnProperty(k)) {
             const value = data[k];
             try {
+              const date = parser.parseGameDate(value.start);
+              if (moment(date).isBefore(moment())) continue;
               const game = {
+                date,
                 summary: formatter.removeTags(value.summary),
-                location: formatter.removeTags(value.location),
+                location: formatter.generateLocation(formatter.removeTags(value.location)),
                 description: formatter.removeTags(value.description),
-                date: parser.parseGameDate(value.start),
-                dateMsg: formatter.generateDateMsg(value.start),
+                dateMsg: formatter.generateDateMsg(value.start)
               };
-              games.push(game);              
+              games.push(game);
             } catch (err) {
               errors++;
               //console.log('format error: ', err);
@@ -77,27 +78,18 @@ const getGames = url => {
   });
 };
 
-module.exports = {fetchFromUrl, getGamesForNextWeek, getNextGame, getGames};
+const fetchFootballGames = () =>
+  getGames(settings.urls.DIF_FOTBOLL);
 
-// fetcher:
-// const fetchFootball = () => {
-//   const url ='https://www.google.com/calendar/ical/6q2n1dbd72cvc21jqjglcjpb48%40group.calendar.google.com/public/basic.ics';
-//   getGames(url);
-// };
+const fetchHockeyGames = () =>
+  getGames(settings.urls.DIF_HOCKEY);
 
-// const generateLocation = fullLocation =>
-//   fullLocation.split(',')[0]
+const fetchAllSports = () => {
+  const football = fetchFootballGames();
+  const hockey = fetchHockeyGames();
+  return football.concat(hockey);
+}
 
-//   const date = parser.parseGameDate(value.start);
-//   if (moment(date).isBefore(moment())) continue;
-//   const game = {
-//     date,
-//     summary: formatter.removeTags(value.summary),
-//     location: formatter.generateLocation(removeTags(value.location)),
-//     description: formatter.removeTags(value.description),
-//     dateMsg: formatter.generateDateMsg(value.start)
-//   };
-//   games.push(game);
 
-// parser:
-// if (moment(rawDate).isValid()) return rawDate;
+
+module.exports = {fetchAllSports, fetchFromUrl, fetchFootballGames, fetchHockeyGames, getGamesForNextWeek, getNextGame, getGames};

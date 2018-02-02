@@ -18,7 +18,9 @@ const isEmptyObject = obj => {
 };
 
 const parseDatePart = rawDate => {
+  if (moment(rawDate, 'YYYY-MM-DD').isValid()) return rawDate;
   if (typeof(rawDate) !== 'string') throw new Error(messages.error.INVALID_DATE);
+
   const date = rawDate.toString().match(/[\d/-]+[T][\d/:]+/g);
   if (date && date.length > 0) 
     return date[0];

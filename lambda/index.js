@@ -19,9 +19,8 @@ const handlers = {
   },
   'NextGameIntent': function () {
     const cardTitle = messages.general.DISPLAY_CARD_TITLE;
-    const url = settings.urls.DIF_HOCKEY;
 
-    fetcher.getGames(url)
+    fetcher.fetchAllSports()
       .then(allGames => fetcher.getNextGame(allGames))
       .then((nextGame) => {
         if (nextGame) {

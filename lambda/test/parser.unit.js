@@ -54,11 +54,16 @@ describe('Parser', () => {
       expect(parser.parseDatePart(rawDate)).to.equal('20180210T190000');
     });
 
+    it('should return input if it is a valid date', () => {
+      const date = '2018-02-01 19:00:00';
+      expect(parser.parseDatePart(date)).to.equal('2018-02-01 19:00:00');
+    });
+
     it('should throw invalid date error if input isn\t a string', () => {
       expect(() => parser.parseDatePart(null)).to.throw(messages.error.INVALID_DATE);
     });
 
-    it('should throw invalid date error if there\'s no valid date in the string', () => {
+    it('should throw invalid date error if there is no valid date in the string', () => {
       const rawDate = 'TZID="asd123';
       expect(() => parser.parseDatePart('asd')).to.throw(messages.error.INVALID_DATE);
     });
@@ -78,7 +83,7 @@ describe('Parser', () => {
       expect(() => parser.parseGameDate('123456')).to.throw(messages.error.INVALID_DATE);
     });
 
-    it('should throw invalid date error if input isn\'t a valid string', () => {
+    it('should throw invalid date error if input is not a valid string', () => {
       expect(() => parser.parseGameDate(null)).to.throw(messages.error.INVALID_DATE);
     });
   });
