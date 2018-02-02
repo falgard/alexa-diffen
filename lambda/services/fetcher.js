@@ -9,7 +9,6 @@ const settings = require('./../../globals/settings');
 const messages = require('./../../globals/messages');
 
 const fetchFromUrl = url => {
-  console.log('inside fetchfromurl');
   return new Promise((resolve, reject) => {
     ical.fromURL(url, {}, (err, data) => {
       if (err) {
@@ -38,7 +37,7 @@ const getNextGame = games => {
   return upcomingGames[0];
 };
 
-const getGames = url => {
+const getGames = (url) => {
   return new Promise((resolve, reject) => {
     fetchFromUrl(url)
       .then(data => {
@@ -56,14 +55,14 @@ const getGames = url => {
               const game = {
                 date,
                 summary: formatter.removeTags(value.summary),
-                location: formatter.generateLocation(formatter.removeTags(value.location)),
+                location: formatter.shortenLocation(formatter.removeTags(value.location)),
                 description: formatter.removeTags(value.description),
                 dateMsg: formatter.generateDateMsg(value.start)
               };
               games.push(game);
             } catch (err) {
               errors++;
-              //console.log('format error: ', err);
+              console.log('format error: ', err);
             }
           }
         }
@@ -72,24 +71,26 @@ const getGames = url => {
         resolve(games);
       })
       .catch(err => {
-        console.log(err);
+        //console.log(err);
         reject(new Error(messages.error.NETWORK_ERROR));
       });
   });
 };
 
 const fetchFootballGames = () =>
-  getGames(settings.urls.DIF_FOTBOLL);
+  getGames(settings.urls.DIF_FOTBOLL)
 
 const fetchHockeyGames = () =>
-  getGames(settings.urls.DIF_HOCKEY);
+  getGames(settings.urls.DIF_HOCKEY)
 
 const fetchAllSports = () => {
-  const football = fetchFootballGames();
-  const hockey = fetchHockeyGames();
-  return football.concat(hockey);
+  const footballGames = fetchFootballGames();
+  const hockeyGames = fetchHockeyGames();
+
+  Promise.all([footballGames, hockeyGames])
+    .then(games => {
+      return games[0].concat(games[1]);
+    });
 }
-
-
 
 module.exports = {fetchAllSports, fetchFromUrl, fetchFootballGames, fetchHockeyGames, getGamesForNextWeek, getNextGame, getGames};

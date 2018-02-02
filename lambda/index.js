@@ -9,19 +9,8 @@ const fetcher = require('./services/fetcher');
 const messages = require('./../globals/messages');
 const settings = require('./../globals/settings');
 
-const handlers = {
-  'LaunchRequest': function () {
-      this.attributes.speechOutput = messages.general.WELCOME_MESSAGE;
-      this.attributes.repromptSpeech = messages.general.WELCOME_REPROMPT;
-
-      this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
-      this.emit(':responseReady');
-  },
-  'NextGameIntent': function () {
-    const cardTitle = messages.general.DISPLAY_CARD_TITLE;
-
-    fetcher.fetchAllSports()
-      .then(allGames => fetcher.getNextGame(allGames))
+const createGameIntent = games => {
+    fetcher.getNextGame(games)
       .then((nextGame) => {
         if (nextGame) {
           const summary = formatter.generateSummary(nextGame);
@@ -42,6 +31,38 @@ const handlers = {
         this.response.speak(speechOutput);
         this.emit(':responseReady');
       });
+};
+
+const handlers = {
+  'LaunchRequest': function () {
+      this.attributes.speechOutput = messages.general.WELCOME_MESSAGE;
+      this.attributes.repromptSpeech = messages.general.WELCOME_REPROMPT;
+
+      this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+      this.emit(':responseReady');
+  },
+  'NextGameIntent': function () {
+    const cardTitle = messages.general.DISPLAY_CARD_TITLE;
+
+    fetcher.fetchAllSports()
+      .then(allGames => {
+        createGameIntent(games);
+      });
+  },
+  'NextFootballGameIntent': function () {
+    const cardTitle = `${messages.general.DISPLAY_CARD_TITLE} - DIF Football`;
+
+    fetcher.fetchFootballGames()
+        .then(footballGames => {
+          createGameIntent(footballGames)
+        });
+  },
+  'NextHockeyGameIntent': function () {
+    const cardTitle = `${messages.general.DISPLAY_CARD_TITLE} - DIF Football`;
+
+    fetcher.fetchFootballGames()
+      .then(allGames => fetcher.getNextGame(allGames))
+
   },
   'AMAZON.HelpIntent': function () {
       this.attributes.speechOutput = messages.general.HELP_MESSAGE;

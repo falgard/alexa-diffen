@@ -27,6 +27,22 @@
                     "samples":[
                         "when is the next game"
                     ]
+                },
+                {
+                    "name":"NextFootballGameIntent",
+                    "slots":[
+                    ],
+                    "samples":[
+                        "when is the next football game"
+                    ]
+                },
+                {
+                    "name":"NextHockeyGameIntent",
+                    "slots":[
+                    ],
+                    "samples":[
+                        "when is the next hockey game"
+                    ]
                 }
             ]
         }
