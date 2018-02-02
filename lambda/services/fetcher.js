@@ -78,3 +78,26 @@ const getGames = url => {
 };
 
 module.exports = {fetchFromUrl, getGamesForNextWeek, getNextGame, getGames};
+
+// fetcher:
+// const fetchFootball = () => {
+//   const url ='https://www.google.com/calendar/ical/6q2n1dbd72cvc21jqjglcjpb48%40group.calendar.google.com/public/basic.ics';
+//   getGames(url);
+// };
+
+// const generateLocation = fullLocation =>
+//   fullLocation.split(',')[0]
+
+//   const date = parser.parseGameDate(value.start);
+//   if (moment(date).isBefore(moment())) continue;
+//   const game = {
+//     date,
+//     summary: formatter.removeTags(value.summary),
+//     location: formatter.generateLocation(removeTags(value.location)),
+//     description: formatter.removeTags(value.description),
+//     dateMsg: formatter.generateDateMsg(value.start)
+//   };
+//   games.push(game);
+
+// parser:
+// if (moment(rawDate).isValid()) return rawDate;
