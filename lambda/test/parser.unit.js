@@ -26,15 +26,41 @@ describe('Parser', () => {
     });
   });
 
+  describe('isEmptyObject', () => {
+    it('should return false for a object', () => {
+      const game = {
+        summary: 'Dif-rubb',
+        location: 'hovet'
+      };
+      expect(parser.isEmptyObject(game)).to.equal(false);
+    });
+
+    it('should return true for a empty object', () => {
+      expect(parser.isEmptyObject({})).to.equal(true);
+    });
+
+    it('should return true for null', () => {
+      expect(parser.isEmptyObject(null)).to.equal(true);
+    });
+
+    it('should return true for undefined', () => {
+      expect(parser.isEmptyObject(undefined)).to.equal(true);
+    });
+  });
+
   describe('parseDatePart', () => {
     it('should parse the date part (20180101T190000) from a string', () => {
       const rawDate = 'TZID="+01:00":20180210T190000';
       expect(parser.parseDatePart(rawDate)).to.equal('20180210T190000');
     });
 
-    it('should return default date if there\'s no valid date in the string', () => {
-      const rawDate = 'TZID="Jan 31 2018';
-      expect(parser.parseDatePart.bind(rawDate)).to.throw(messages.error.INVALID_DATE);
+    it('should throw invalid date error if input isn\t a string', () => {
+      expect(() => parser.parseDatePart(null)).to.throw(messages.error.INVALID_DATE);
+    });
+
+    it('should throw invalid date error if there\'s no valid date in the string', () => {
+      const rawDate = 'TZID="asd123';
+      expect(() => parser.parseDatePart('asd')).to.throw(messages.error.INVALID_DATE);
     });
   });
 
@@ -48,12 +74,12 @@ describe('Parser', () => {
       expect(res.isValid()).to.equal(true);
     });
 
-    it('should return a default date if input is invalid', () => {
-      expect(parser.parseGameDate.bind('123456')).to.throw(messages.error.INVALID_DATE);
+    it('should throw invalid date error if input is invalid', () => {
+      expect(() => parser.parseGameDate('123456')).to.throw(messages.error.INVALID_DATE);
     });
 
-    it('should return default date if input isn\'t a valid string', () => {
-      expect(parser.parseGameDate.bind(null)).to.throw(messages.error.INVALID_DATE);
+    it('should throw invalid date error if input isn\'t a valid string', () => {
+      expect(() => parser.parseGameDate(null)).to.throw(messages.error.INVALID_DATE);
     });
   });
 });

@@ -9,8 +9,9 @@ const settings = require('./../../globals/settings');
 const messages = require('./../../globals/messages');
 
 const fetchFromUrl = url => {
+  console.log('inside fetchfromurl');
   return new Promise((resolve, reject) => {
-    ical.fromURL(url, {}, function(err, data) {
+    ical.fromURL(url, {}, (err, data) => {
       if (err) {
         reject(new Error(err));
       }
@@ -29,7 +30,7 @@ const getGamesForNextWeek = games => {
 };
 
 const getNextGame = games => {
-  if (typeof(games) === 'undefined' || games.lenght < 1) {
+  if (games === null || typeof(games) === 'undefined' || games.length < 1) {
       throw new Error(messages.error.NO_GAMES);
   }
   const upcomingGames = getGamesForNextWeek(games);
@@ -41,7 +42,8 @@ const getGames = url => {
   return new Promise((resolve, reject) => {
     fetchFromUrl(url)
       .then(data => {
-        if (typeof(data) === 'undefined'|| parser.isEmptyObject(data)) {
+        console.log('stub!');
+        if (typeof(data) === 'undefined' || parser.isEmptyObject(data)) {
           throw new Error(messages.error.NOT_FOUND);
         }
         let games = [];
@@ -75,4 +77,4 @@ const getGames = url => {
   });
 };
 
-module.exports = {getGamesForNextWeek, getNextGame, getGames};
+module.exports = {fetchFromUrl, getGamesForNextWeek, getNextGame, getGames};

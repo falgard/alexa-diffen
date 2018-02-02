@@ -72,7 +72,7 @@ describe('Formatter', () => {
     });
 
     it('should throw invalid date error for invalid input', () => {
-      expect(formatter.generateDateMsg.bind('123456')).to.throw(messages.error.INVALID_DATE);
+      expect(() => formatter.generateDateMsg('123456')).to.throw(messages.error.INVALID_DATE);
     });
   });
 

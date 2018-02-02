@@ -61,4 +61,22 @@ describe('Fetcher', () => {
       expect(res.length).to.equal(0);
     });
   });
+
+  describe('getNextGame', () => {
+    it('should get the next upcoming game', () => {
+      const res = fetcher.getNextGame(games, games.length);
+      expect(games.length).to.equal(15);
+      expect(games[5]).to.equal(res);
+      expect(res.date.format()).to.equal(today.format());
+      expect(res.summary).to.equal('DIF-rubb0');
+    });
+
+    it('should throw error if there\'s no games', () => {
+      expect(() => fetcher.getNextGame([])).to.throw(messages.error.NO_GAMES);
+    });
+
+    it('should throw error if there\'s no input', () => {
+      expect(() => fetcher.getNextGame(null)).to.throw(messages.error.NO_GAMES);
+    });
+  });
 });
