@@ -9,7 +9,7 @@ const fetcher = require('./services/fetcher');
 const messages = require('./../globals/messages');
 const settings = require('./../globals/settings');
 
-const createGameIntent = games => {
+const createGameIntent = (games, cardTitle) => {
     fetcher.getNextGame(games)
       .then((nextGame) => {
         if (nextGame) {
@@ -17,7 +17,7 @@ const createGameIntent = games => {
           this.attributes.speechOutput = summary;
           this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
           this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
-          this.response.cardRenderer(messages.general.DISPLAY_CARD_TITLE, summary);
+          this.response.cardRenderer(cardTitle, summary);
           this.emit(':responseReady');
         } else {
           this.attributes.speechOutput = messages.error.NO_GAMES;
@@ -46,23 +46,24 @@ const handlers = {
 
     fetcher.fetchAllSports()
       .then(allGames => {
-        createGameIntent(games);
+        createGameIntent(games, cardTitle);
       });
   },
   'NextFootballGameIntent': function () {
     const cardTitle = `${messages.general.DISPLAY_CARD_TITLE} - DIF Football`;
 
     fetcher.fetchFootballGames()
-        .then(footballGames => {
-          createGameIntent(footballGames)
-        });
+      .then(footballGames => {
+        createGameIntent(footballGames, cardTitle)
+      });
   },
   'NextHockeyGameIntent': function () {
-    const cardTitle = `${messages.general.DISPLAY_CARD_TITLE} - DIF Football`;
-
-    fetcher.fetchFootballGames()
-      .then(allGames => fetcher.getNextGame(allGames))
-
+    const cardTitle = `${messages.general.DISPLAY_CARD_TITLE} - DIF Hockey`;
+    
+    fetcher.fetchHockeyGames()
+      .then(hockeyGames => {
+        createGameIntent(hockeyGames, cardTitle)
+      });
   },
   'AMAZON.HelpIntent': function () {
       this.attributes.speechOutput = messages.general.HELP_MESSAGE;
