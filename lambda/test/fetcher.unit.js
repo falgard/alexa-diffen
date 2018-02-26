@@ -23,6 +23,7 @@ describe('Fetcher', () => {
   describe('getNextGame', () => {
     it('should get the next upcoming game', () => {
       const res = fetcher.getNextGame(games);
+      console.log('res:', res);
       expect(games.length).to.equal(15);
       expect(games[5]).to.equal(res);
       expect(res.date.format()).to.equal(today.format());

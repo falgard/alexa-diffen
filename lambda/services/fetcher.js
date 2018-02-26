@@ -22,7 +22,7 @@ const fetchFromUrl = url => {
 const getGamesForNextWeek = games => {
   const today = moment(new Date());
   const oneWeek = today.clone().add(1, 'week');
-
+  console.log(`Filtering games from today to ${oneWeek}`);
   return games.filter(game => {
     return moment(game.date).isBetween(today, oneWeek, 'day', '[]');
   });
@@ -32,9 +32,15 @@ const getNextGame = games => {
   if (games === null || typeof(games) === 'undefined' || games.length < 1) {
       throw new Error(messages.error.NO_GAMES);
   }
-  const upcomingGames = getGamesForNextWeek(games);
-  if (upcomingGames.lenght < 1) throw new Error(messages.error.NO_GAMES);
-  return upcomingGames[0];
+  console.log(`Finding next game...`);
+  let today = moment(new Date()).add(-1, 'hours');
+  let next;
+  games.forEach(game => {
+    if (game.date < today) return;
+    else if (!next || (game.date < next.date)) next = game;
+  });
+  console.log(`Next game is ${JSON.stringify(next, null, 2)}`);
+  return next;
 };
 
 const getGames = (url) => {
@@ -83,14 +89,13 @@ const fetchFootballGames = () =>
 const fetchHockeyGames = () =>
   getGames(settings.urls.DIF_HOCKEY)
 
-const fetchAllSports = () => {
-  const footballGames = fetchFootballGames();
-  const hockeyGames = fetchHockeyGames();
+const fetchAllSports = async () => {
+  console.log(`Fetching upcoming games ...`);
+  const footballGames = await fetchFootballGames();
+  const hockeyGames = await fetchHockeyGames();
 
-  Promise.all([footballGames, hockeyGames])
-    .then(games => {
-      return games[0].concat(games[1]);
-    });
+  console.log(`Done fetching games got ${footballGames.length} Football games and ${hockeyGames.length} Hockey games`);
+  return footballGames.concat(hockeyGames);
 }
 
 module.exports = {fetchAllSports, fetchFromUrl, fetchFootballGames, fetchHockeyGames, getGamesForNextWeek, getNextGame, getGames};

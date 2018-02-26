@@ -9,28 +9,27 @@ const fetcher = require('./services/fetcher');
 const messages = require('./../globals/messages');
 const settings = require('./../globals/settings');
 
-const createGameIntent = (games, cardTitle) => {
-    fetcher.getNextGame(games)
-      .then((nextGame) => {
-        if (nextGame) {
-          const summary = formatter.generateSummary(nextGame);
-          this.attributes.speechOutput = summary;
-          this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
-          this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
-          this.response.cardRenderer(cardTitle, summary);
-          this.emit(':responseReady');
-        } else {
-          this.attributes.speechOutput = messages.error.NO_GAMES;
-          this.response.speak(speechOutput);
-          this.emit(':responseReady');
-        }
-      })
-      .catch(err => {
-        console.log(`Error: ${err}`);
-        this.attributes.speechOutput = err;
+const createGameIntent = async (games, cardTitle) => {
+  try {
+    const nextGame = await fetcher.getNextGame(games);
+    if (nextGame) {
+        const summary = formatter.generateSummary(nextGame);
+        this.attributes.speechOutput = summary;
+        this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
+        this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+        this.response.cardRenderer(cardTitle, summary);
+        this.emit(':responseReady');
+      } else {
+        this.attributes.speechOutput = messages.error.NO_GAMES;
         this.response.speak(speechOutput);
         this.emit(':responseReady');
-      });
+      }   
+  } catch (error) {
+      console.log(`Error: ${error}`);
+      this.attributes.speechOutput = error;
+      this.response.speak(speechOutput);
+      this.emit(':responseReady');
+  }
 };
 
 const handlers = {
@@ -45,7 +44,7 @@ const handlers = {
     const cardTitle = messages.general.DISPLAY_CARD_TITLE;
 
     fetcher.fetchAllSports()
-      .then(allGames => {
+      .then(games => {
         createGameIntent(games, cardTitle);
       });
   },
@@ -92,8 +91,7 @@ const handlers = {
       this.attributes.repromptSpeech = messages.general.HELP_REPROMPT;
       this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
       this.emit(':responseReady');
-  },
-
+  }
 };
 
 exports.handler = function (event, context) {
