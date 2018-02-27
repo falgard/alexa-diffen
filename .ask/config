@@ -6,8 +6,10 @@
       "merge": {
         "skillManifest": {
           "apis": {
-            "endpoint": {
-              "uri": "ask-diffen-default"
+            "custom": {
+              "endpoint": {
+                "uri": "ask-diffen"
+              }
             }
           }
         }

@@ -29,14 +29,6 @@
                     ]
                 },
                 {
-                    "name":"UpcomingGameIntent",
-                    "slots":[
-                    ],
-                    "samples":[
-                        "what games are on this week"
-                    ]
-                },
-                {
                     "name":"NextFootballGameIntent",
                     "slots":[
                     ],
@@ -50,14 +42,6 @@
                     ],
                     "samples":[
                         "when is the next hockey game"
-                    ]
-                },
-                {
-                    "name":"SpouseAwayIntent",
-                    "slots":[
-                    ],
-                    "samples":[
-                        "is my spouse coming home tonight"
                     ]
                 }
             ]

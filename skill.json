@@ -6,14 +6,16 @@
           "summary": "Find out when the next DIF game is",
           "examplePhrases": [
             "Alexa open diffen games?",
-            "Alexa when is the next game?"
+            "Alexa when is the next game?",
+            "Alexa when is the next hockey game?"
           ],
-          "name": "diffen",
+          "name": "Diffen games",
           "keywords": [
             "DIF",
             "Djurgården",
             "Djurgarden",
             "Hockey",
+            "Soccer",
             "Games"
           ],
           "description": "Ask Alexa when DIF is playing their next game."
@@ -25,9 +27,11 @@
       "distributionCountries": []
     },
     "apis": {
+      "custom": {
         "endpoint": {
           "sourceDir": "lambda"
         }
+      }
     },
     "manifestVersion": "1.0"
   }
