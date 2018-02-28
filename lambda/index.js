@@ -9,7 +9,7 @@ const fetcher = require('./services/fetcher');
 const messages = require('./../globals/messages');
 const settings = require('./../globals/settings');
 
-const createGameIntent = async () => {
+const createGameIntent = async (games, cardTitle) => {
   try {
     const nextGame = await fetcher.getNextGame(games);
     if (nextGame) {
@@ -33,60 +33,51 @@ const createGameIntent = async () => {
 };
 
 const handlers = {
-  'LaunchRequest': function () {
+  'LaunchRequest': () => {
       this.attributes.speechOutput = messages.general.WELCOME_MESSAGE;
       this.attributes.repromptSpeech = messages.general.WELCOME_REPROMPT;
 
       this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
       this.emit(':responseReady');
   },
-  'NextGameIntent': function () {
+  'NextGameIntent': async () => {
     const cardTitle = messages.general.DISPLAY_CARD_TITLE;
-
-    fetcher.fetchAllSports()
-      .then(games => {
-        createGameIntent(games, cardTitle);
-      });
+    const games = await fetcher.fetchAllSports();
+    createGameIntent(games, cardTitle);
   },
-  'NextFootballGameIntent': function () {
+  'NextFootballGameIntent': async () => {
     const cardTitle = `${messages.general.DISPLAY_CARD_TITLE} - DIF Football`;
-
-    fetcher.fetchFootballGames()
-      .then(footballGames => {
-        createGameIntent(footballGames, cardTitle)
-      });
+    const games = await fetcher.fetchFootballGames();
+    createGameIntent(games, cardTitle);
   },
-  'NextHockeyGameIntent': function () {
+  'NextHockeyGameIntent': () => {
     const cardTitle = `${messages.general.DISPLAY_CARD_TITLE} - DIF Hockey`;
-    
-    fetcher.fetchHockeyGames()
-      .then(hockeyGames => {
-        createGameIntent(hockeyGames, cardTitle)
-      });
+    const games = await fetcher.fetchHockeyGames();
+    createGameIntent(games, cardTitle);
   },
-  'AMAZON.HelpIntent': function () {
+  'AMAZON.HelpIntent': () => {
       this.attributes.speechOutput = messages.general.HELP_MESSAGE;
       this.attributes.repromptSpeech = messages.general.HELP_REPROMPT;
 
       this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
       this.emit(':responseReady');
   },
-  'AMAZON.RepeatIntent': function () {
+  'AMAZON.RepeatIntent': () => {
       this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
       this.emit(':responseReady');
   },
-  'AMAZON.StopIntent': function () {
+  'AMAZON.StopIntent': () => {
       this.response.speak(messages.general.STOP_MESSAGE);
       this.emit(':responseReady');
   },
-  'AMAZON.CancelIntent': function () {
+  'AMAZON.CancelIntent': () => {
       this.response.speak(messages.general.STOP_MESSAGE);
       this.emit(':responseReady');
   },
-  'SessionEndedRequest': function () {
+  'SessionEndedRequest': () => {
       console.log(`Session ended: ${this.event.request.reason}`);
   },
-  'Unhandled': function () {
+  'Unhandled': () => {
       this.attributes.speechOutput = messages.general.HELP_MESSAGE;
       this.attributes.repromptSpeech = messages.general.HELP_REPROMPT;
       this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
@@ -94,7 +85,7 @@ const handlers = {
   }
 };
 
-exports.handler = function (event, context) {
+exports.handler = (event, context) => {
   const alexa = Alexa.handler(event, context);
   alexa.APP_ID = settings.configs.APP_ID;
 
