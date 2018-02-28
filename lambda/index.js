@@ -9,21 +9,45 @@ const fetcher = require('./services/fetcher');
 const messages = require('./../globals/messages');
 const settings = require('./../globals/settings');
 
-const createGameIntent = async (games, cardTitle) => {
+// const createGameIntent = async (games, cardTitle) => {
+//   try {
+//     const nextGame = await fetcher.getNextGame(games);
+//     if (nextGame) {
+//         const summary = formatter.generateSummary(nextGame);
+//         this.attributes.speechOutput = summary;
+//         this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
+//         this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+//         this.response.cardRenderer(cardTitle, summary);
+//         this.emit(':responseReady');
+//       } else {
+//         this.attributes.speechOutput = messages.error.NO_GAMES;
+//         this.response.speak(speechOutput);
+//         this.emit(':responseReady');
+//       }   
+//   } catch (error) {
+//       console.log(`Error: ${error}`);
+//       this.attributes.speechOutput = error;
+//       this.response.speak(speechOutput);
+//       this.emit(':responseReady');
+//   }
+// };
+
+const createGameIntent = (games, cardTitle) => {
   try {
-    const nextGame = await fetcher.getNextGame(games);
-    if (nextGame) {
-        const summary = formatter.generateSummary(nextGame);
-        this.attributes.speechOutput = summary;
-        this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
-        this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
-        this.response.cardRenderer(cardTitle, summary);
-        this.emit(':responseReady');
-      } else {
-        this.attributes.speechOutput = messages.error.NO_GAMES;
-        this.response.speak(speechOutput);
-        this.emit(':responseReady');
-      }   
+    fetcher.getNextGame(games).then((nextGame) => {
+        if (nextGame) {
+            const summary = formatter.generateSummary(nextGame);
+            this.attributes.speechOutput = summary;
+            this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
+            this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+            this.response.cardRenderer(cardTitle, summary);
+            this.emit(':responseReady');
+          } else {
+            this.attributes.speechOutput = messages.error.NO_GAMES;
+            this.response.speak(speechOutput);
+            this.emit(':responseReady');
+          }   
+    })
   } catch (error) {
       console.log(`Error: ${error}`);
       this.attributes.speechOutput = error;
@@ -40,10 +64,11 @@ const handlers = {
       this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
       this.emit(':responseReady');
   },
-  'NextGameIntent': async () => {
+  'NextGameIntent': function() {
     const cardTitle = messages.general.DISPLAY_CARD_TITLE;
-    const games = await fetcher.fetchAllSports();
-    createGameIntent(games, cardTitle);
+    fetcher.fetchAllSports().then(games => {
+        createGameIntent(games, cardTitle);
+    })
   },
   'NextFootballGameIntent': async () => {
     const cardTitle = `${messages.general.DISPLAY_CARD_TITLE} - DIF Football`;
