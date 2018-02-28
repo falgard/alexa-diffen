@@ -8,19 +8,9 @@ module.exports = {
       "ecmaVersion": 2017
     },
     "extends": [
-        "airbnb-base",
-        "plugin:import/errors",
-        "prettier"
-      ],
-    "plugins": [
-        "import",
-        "prettier"
+        "airbnb-base"
       ],
     "rules": {
-        "prettier/prettier": "error",
-        "import/no-extraneous-dependencies": ["error", {"packageDir": "."}],
-        "import/prefer-default-export": 0,
-        "no-underscore-dangle": 0,
         "indent": [
             "error",
             4

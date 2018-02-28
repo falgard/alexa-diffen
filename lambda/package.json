@@ -13,11 +13,8 @@
   "devDependencies": {
     "chai": "*",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.9.0",
     "mocha": "*",
-    "nyc": "^11.4.1",
-    "prettier": "^1.11.0"
+    "nyc": "^11.4.1"
   },
   "scripts": {
     "test": "node_modules/.bin/nyc --cache false node_modules/.bin/mocha"
