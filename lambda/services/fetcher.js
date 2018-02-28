@@ -96,6 +96,6 @@ const fetchAllSports = async () => {
 
   console.log(`Done fetching games got ${footballGames.length} Football games and ${hockeyGames.length} Hockey games`);
   return footballGames.concat(hockeyGames);
-}
+};
 
 module.exports = {fetchAllSports, fetchFromUrl, fetchFootballGames, fetchHockeyGames, getGamesForNextWeek, getNextGame, getGames};

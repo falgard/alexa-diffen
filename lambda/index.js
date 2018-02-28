@@ -9,7 +9,7 @@ const fetcher = require('./services/fetcher');
 const messages = require('./../globals/messages');
 const settings = require('./../globals/settings');
 
-const createGameIntent = async (games, cardTitle) => {
+const createGameIntent = async () => {
   try {
     const nextGame = await fetcher.getNextGame(games);
     if (nextGame) {
