@@ -4,7 +4,7 @@
       "skill_id": "amzn1.ask.skill.12ce19cd-8072-43e6-982e-343845e0760e",
       "was_cloned": false,
       "merge": {
-        "skillManifest": {
+        "manifest": {
           "apis": {
             "custom": {
               "endpoint": {
