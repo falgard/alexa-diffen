@@ -13,21 +13,21 @@ const createGameIntent = (games, cardTitle) => {
     fetcher.getNextGame(games).then((nextGame) => {
         if (nextGame) {
             const summary = formatter.generateSummary(nextGame);
-            this.attributes.speechOutput = summary;
-            this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
-            this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
-            this.response.cardRenderer(cardTitle, summary);
-            this.emit(':responseReady');
+            // this.attributes.speechOutput = summary;
+            // this.attributes.repromptSpeech = messages.general.REPEAT_MESSAGE;
+            // this.response.speak(this.attributes.speechOutput).listen(this.attributes.repromptSpeech);
+            // this.response.cardRenderer(cardTitle, summary);
+            // this.emit(':responseReady');
         } else {
-            this.attributes.speechOutput = messages.error.NO_GAMES;
-            this.response.speak(speechOutput);
-            this.emit(':responseReady');
+        this.attributes.speechOutput = messages.error.NO_GAMES;
+        this.response.speak(speechOutput);
+        this.emit(':responseReady');
         }
     }).catch((error) => {
         console.log(`Error: ${error}`);
-        this.attributes.speechOutput = error;
-        this.response.speak(speechOutput);
-        this.emit(':responseReady');
+      //   this.attributes.speechOutput = error;
+      //   this.response.speak(speechOutput);
+      //   this.emit(':responseReady');
     });
 };
 
@@ -87,10 +87,4 @@ const handlers = {
   }
 };
 
-exports.handler = (event, context) => {
-  const alexa = Alexa.handler(event, context);
-  alexa.APP_ID = settings.configs.APP_ID;
-
-  alexa.registerHandlers(handlers);
-  alexa.execute();
-};
+handlers.NextGameIntent()
