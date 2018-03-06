@@ -1,13 +1,9 @@
 'use strict';
 
 require('babel-polyfill');
-const Alexa = require('alexa-sdk');
-const moment = require('moment');
-const utils = require('util');
 const formatter = require('./helpers/formatter');
 const fetcher = require('./services/fetcher');
 const messages = require('./../globals/messages');
-const settings = require('./../globals/settings');
 
 const createGameIntent = (games, cardTitle) => {
     fetcher.getNextGame(games).then((nextGame) => {
