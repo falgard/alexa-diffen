@@ -10,7 +10,6 @@ const messages = require('./../globals/messages');
 const settings = require('./../globals/settings');
 
 const createGameIntent = (games, cardTitle) => {
-  try {
     fetcher.getNextGame(games).then((nextGame) => {
         if (nextGame) {
             const summary = formatter.generateSummary(nextGame);
@@ -20,17 +19,16 @@ const createGameIntent = (games, cardTitle) => {
             this.response.cardRenderer(cardTitle, summary);
             this.emit(':responseReady');
         } else {
-        this.attributes.speechOutput = messages.error.NO_GAMES;
+            this.attributes.speechOutput = messages.error.NO_GAMES;
+            this.response.speak(speechOutput);
+            this.emit(':responseReady');
+        }
+    }).catch((error) => {
+        console.log(`Error: ${error}`);
+        this.attributes.speechOutput = error;
         this.response.speak(speechOutput);
         this.emit(':responseReady');
-        }
-    })
-  } catch (error) {
-      console.log(`Error: ${error}`);
-      this.attributes.speechOutput = error;
-      this.response.speak(speechOutput);
-      this.emit(':responseReady');
-  }
+    });
 };
 
 const handlers = {
