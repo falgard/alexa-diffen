@@ -6,7 +6,7 @@ const expect = chai.expect;
 const moment = require('moment');
 
 const fetcher = require('./../services/fetcher');
-const messages = require('./../../globals/messages');
+const messages = require('./../globals/messages');
 
 describe('Fetcher', () => {
   let games = [];
@@ -21,8 +21,8 @@ describe('Fetcher', () => {
   });
 
   describe('getNextGame', () => {
-    it('should get the next upcoming game', () => {
-      const res = fetcher.getNextGame(games);
+    it('should get the next upcoming game', async () => {
+      const res = await fetcher.getNextGame(games);
       console.log('res:', res);
       expect(games.length).to.equal(15);
       expect(games[5]).to.equal(res);

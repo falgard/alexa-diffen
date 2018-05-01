@@ -2,7 +2,7 @@
 
 require('babel-polyfill');
 const moment = require('moment');
-const messages = require('./../../globals/messages');
+const messages = require('./../globals/messages');
 
 const isSameDay = (date, refDate) =>
     date.isSame(refDate, 'day');

@@ -4,7 +4,7 @@ require('babel-polyfill');
 const moment = require('moment');
 const utils = require('util');
 const parser = require('./parser');
-const messages = require('./../../globals/messages');
+const messages = require('./../globals/messages');
 
 const removeTags = str =>
     str ? str.replace(/<(?:.|\n)*?>/gm, '') : str;

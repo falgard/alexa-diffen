@@ -6,7 +6,7 @@ const expect = chai.expect;
 const moment = require('moment');
 
 const formatter = require('./../helpers/formatter');
-const messages = require('./../../globals/messages');
+const messages = require('./../globals/messages');
 
 const constructDifHockeyDate = date => {
   return `TZID="+01:00":20${date}T190000`; // Format for DIF Hockey 2017/2018

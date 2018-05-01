@@ -5,8 +5,8 @@ const chai = require('chai');
 const expect = chai.expect;
 const moment = require('moment');
 
-const parser = require('.././helpers/parser');
-const messages = require('./../../globals/messages');
+const parser = require('./../helpers/parser');
+const messages = require('./../globals/messages');
 
 describe('Parser', () => {
   describe('isSameDay', () => {

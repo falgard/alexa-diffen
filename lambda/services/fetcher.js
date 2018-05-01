@@ -5,8 +5,8 @@ const ical = require('ical');
 const moment = require('moment');
 const formatter = require('./../helpers/formatter');
 const parser = require('./../helpers/parser');
-const settings = require('./../../globals/settings');
-const messages = require('./../../globals/messages');
+const settings = require('./../globals/settings');
+const messages = require('./../globals/messages');
 
 const fetchFromUrl = url => {
   return new Promise((resolve, reject) => {
