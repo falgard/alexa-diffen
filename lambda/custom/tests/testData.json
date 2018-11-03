@@ -1,0 +1,1879 @@
+{
+  "7d64002d-36f6-4b93-bd0e-fc6795565518": {
+    "type": "VTIMEZONE",
+    "params": [],
+    "tzid": "Europe/Stockholm",
+    "LIC-LOCATION": "Europe/Stockholm",
+    "78514290-b526-4008-8a11-291aec18f4c5": {
+      "type": "DAYLIGHT",
+      "params": [],
+      "tzoffsetfrom": "+0100",
+      "tzoffsetto": "+0200",
+      "tzname": "CEST",
+      "start": "1970-03-29T01:00:00.000Z",
+      "rrule": "RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU"
+    },
+    "2392f8c2-3326-4d28-b465-e558f2d3d617": {
+      "type": "STANDARD",
+      "params": [],
+      "tzoffsetfrom": "+0200",
+      "tzoffsetto": "+0100",
+      "tzname": "CET",
+      "start": "1970-10-25T02:00:00.000Z",
+      "rrule": "RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU"
+    }
+  },
+  "7j2nijv9j01mgqv6ok3tdf33rt@google.com": {
+    "type": "VEVENT",
+    "params": [],
+    "start": "2018-12-12T17:00:00.000Z",
+    "end": "2018-12-12T21:00:00.000Z",
+    "dtstamp": "2018-10-29T09:30:58.000Z",
+    "organizer": {
+      "params": {
+        "CN": "richard.rehnstam@nuway.se"
+      },
+      "val": "mailto:richard.rehnstam@nuway.se"
+    },
+    "uid": "7j2nijv9j01mgqv6ok3tdf33rt@google.com",
+    "attendee": [
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "richard.rehnstam@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:richard.rehnstam@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "admin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:admin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:malmo_kollegor@nuway.se"
+      }
+    ],
+    "created": "2018-10-12T07:40:35.000Z",
+    "description": "Hej allesammans,\n\nVi kör ett trevligt julbord tillsammans på Grand Hotell i Lund. Skickar ut redan nu så att ni har det i era kalendrar.\n\nHälsningar,\n//Richard, F1 och F2\n\nDen här händelsen har ett videosamtal.\nGå med: https://meet.google.com/ddb-gwha-pfo\n+1 631-606-4381 PIN-kod: 350363690#",
+    "lastmodified": "2018-10-28T06:07:21.000Z",
+    "location": "Grand Hotel Lund, Bantorget 1, 222 29 Lund, Sverige",
+    "sequence": "0",
+    "status": "CONFIRMED",
+    "summary": "Nuway Julbord",
+    "transparency": "OPAQUE"
+  },
+  "7gc9hsr45ugi9gj62ic8q9cile@google.com": {
+    "type": "VEVENT",
+    "params": [],
+    "start": "2018-11-08T16:00:00.000Z",
+    "end": "2018-11-08T19:00:00.000Z",
+    "dtstamp": "2018-10-29T09:30:58.000Z",
+    "organizer": {
+      "params": {
+        "CN": "richard.rehnstam@nuway.se"
+      },
+      "val": "mailto:richard.rehnstam@nuway.se"
+    },
+    "uid": "7gc9hsr45ugi9gj62ic8q9cile@google.com",
+    "attendee": [
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:malmo_kollegor@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "asas.innab@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:asas.innab@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "perica.ivkovic@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:perica.ivkovic@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "admin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:admin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "patrick.persson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:patrick.persson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "richard.rehnstam@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:richard.rehnstam@nuway.se"
+      }
+    ],
+    "created": "2018-10-11T09:18:02.000Z",
+    "description": "Hej vänner,\n\nTänkte att vi kör en go AW med lite shuffle board på Brewdog i Malmö. Banorna är bokade mellan 17-19.\n\nSjälvklart blir det öl eller annan dryck och lite goa nachos!\n\nVäl mött!\n\n//Richard\n\nDen här händelsen har ett videosamtal.\nGå med: https://meet.google.com/dyp-sray-ttj\n+1 315-646-8224 PIN-kod: 889367004#",
+    "lastmodified": "2018-10-28T06:05:02.000Z",
+    "location": "BrewDog Bar Malmö, Baltzarsgatan 25, 211 36 Malmö, Sverige",
+    "sequence": "0",
+    "status": "CONFIRMED",
+    "summary": "AW med Shuffle board",
+    "transparency": "OPAQUE"
+  },
+  "4ncggj912b76p89b83aa6v9sn1@google.com": {
+    "type": "VEVENT",
+    "params": [],
+    "start": "2018-12-05T16:00:00.000Z",
+    "end": "2018-12-05T18:00:00.000Z",
+    "dtstamp": "2018-10-29T09:30:58.000Z",
+    "organizer": {
+      "params": {
+        "CN": "mikael.falgard@nuway.se"
+      },
+      "val": "mailto:mikael.falgard@nuway.se"
+    },
+    "uid": "4ncggj912b76p89b83aa6v9sn1@google.com",
+    "attendee": [
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "alexander.woldner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:alexander.woldner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "matteus.hemstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:matteus.hemstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "oscar.vonhoffmann@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:oscar.vonhoffmann@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mi.chu@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mi.chu@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "erik.haqvinsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:erik.haqvinsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mathias.nohall@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mathias.nohall@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "miriam.tisander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:miriam.tisander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "philip.svensson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:philip.svensson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mikael.jonsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.jonsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "sebastian.valbere@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:sebastian.valbere@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "johan.kinnander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:johan.kinnander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "isak.kogner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:isak.kogner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mary.aberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mary.aberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "petter.djupfeldt@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:petter.djupfeldt@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mikael.falgard@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.falgard@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "simon.evertsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:simon.evertsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "robin.merell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:robin.merell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "emil.bjorling@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:emil.bjorling@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "patrick.lindell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:patrick.lindell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "nina.stolze@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:nina.stolze@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "anton.forsberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:anton.forsberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "linnea.sandelin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:linnea.sandelin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mans.wikstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mans.wikstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "mahmudul.hazra@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mahmudul.hazra@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "tobias.wallenborg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:tobias.wallenborg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "roberto.garcia@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:roberto.garcia@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "admin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:admin@nuway.se"
+      }
+    ],
+    "created": "2018-10-19T10:12:56.000Z",
+    "description": "Johan kommer köra en dragning om unit testning (yeay :D)\n\nAgenda:\n1. What is a unit test?\n2. What does it take to create a unit test?\n3. Benefits of unit testing with a quick code comparison, testable vs. not-so-testable\n4. Test-driven development (a.k.a. \"Test first\")",
+    "lastmodified": "2018-10-24T08:33:33.000Z",
+    "location": "Sibyllegatan 46, 114 43 Stockholm, Sverige",
+    "sequence": "1",
+    "status": "CONFIRMED",
+    "summary": "Komp.träff Stockholm - tema unit testning ",
+    "transparency": "TRANSPARENT"
+  },
+  "2sdrfoq8fo90lvj0lc5l5jc8vg@google.com": {
+    "type": "VEVENT",
+    "params": [],
+    "start": "2018-11-16T16:00:00.000Z",
+    "end": "2018-11-16T21:00:00.000Z",
+    "dtstamp": "2018-10-29T09:30:58.000Z",
+    "organizer": {
+      "params": {
+        "CN": "mikael.falgard@nuway.se"
+      },
+      "val": "mailto:mikael.falgard@nuway.se"
+    },
+    "uid": "2sdrfoq8fo90lvj0lc5l5jc8vg@google.com",
+    "attendee": [
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "johan.kinnander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:johan.kinnander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "simon.evertsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:simon.evertsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mikael.falgard@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.falgard@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "admin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:admin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "roberto.garcia@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:roberto.garcia@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "alexander.woldner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:alexander.woldner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "philip.svensson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:philip.svensson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "linnea.sandelin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:linnea.sandelin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "petter.djupfeldt@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:petter.djupfeldt@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "robin.merell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:robin.merell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mary.aberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mary.aberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "isak.kogner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:isak.kogner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "patrick.lindell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:patrick.lindell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "anton.forsberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:anton.forsberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mahmudul.hazra@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mahmudul.hazra@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "tobias.wallenborg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:tobias.wallenborg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "oscar.vonhoffmann@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:oscar.vonhoffmann@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "emil.bjorling@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:emil.bjorling@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mathias.nohall@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mathias.nohall@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mi.chu@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mi.chu@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "nina.stolze@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:nina.stolze@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "miriam.tisander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:miriam.tisander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "matteus.hemstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:matteus.hemstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mans.wikstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mans.wikstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "sebastian.valbere@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:sebastian.valbere@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "erik.haqvinsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:erik.haqvinsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mikael.jonsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.jonsson@nuway.se"
+      }
+    ],
+    "created": "2018-10-16T08:21:48.000Z",
+    "description": "På önskan av Simon kör vi en aw med (frivillig?) kareoke",
+    "lastmodified": "2018-10-24T06:57:07.000Z",
+    "location": "tbd",
+    "sequence": "1",
+    "status": "CONFIRMED",
+    "summary": "AW Stockholm - kareoke",
+    "transparency": "OPAQUE"
+  },
+  "04lihko4d7u03b4as6gm696844@google.com": {
+    "type": "VEVENT",
+    "params": [],
+    "start": "2018-12-13T16:00:00.000Z",
+    "end": "2018-12-13T21:00:00.000Z",
+    "dtstamp": "2018-10-29T09:30:58.000Z",
+    "organizer": {
+      "params": {
+        "CN": "mikael.falgard@nuway.se"
+      },
+      "val": "mailto:mikael.falgard@nuway.se"
+    },
+    "uid": "04lihko4d7u03b4as6gm696844@google.com",
+    "attendee": [
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mary.aberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mary.aberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "anton.forsberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:anton.forsberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "nina.stolze@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:nina.stolze@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mans.wikstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mans.wikstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "patrick.lindell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:patrick.lindell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "alexander.woldner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:alexander.woldner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "sebastian.valbere@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:sebastian.valbere@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "simon.evertsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:simon.evertsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "linnea.sandelin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:linnea.sandelin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "isak.kogner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:isak.kogner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "erik.haqvinsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:erik.haqvinsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "matteus.hemstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:matteus.hemstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mahmudul.hazra@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mahmudul.hazra@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "robin.merell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:robin.merell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mathias.nohall@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mathias.nohall@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "johan.kinnander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:johan.kinnander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "roberto.garcia@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:roberto.garcia@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "tobias.wallenborg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:tobias.wallenborg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mi.chu@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mi.chu@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mikael.falgard@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.falgard@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "admin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:admin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "miriam.tisander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:miriam.tisander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mikael.jonsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.jonsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "petter.djupfeldt@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:petter.djupfeldt@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "oscar.vonhoffmann@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:oscar.vonhoffmann@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "emil.bjorling@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:emil.bjorling@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "philip.svensson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:philip.svensson@nuway.se"
+      }
+    ],
+    "created": "2018-10-15T12:04:06.000Z",
+    "description": "Mer info kommer närmare",
+    "lastmodified": "2018-10-24T06:25:42.000Z",
+    "location": "Cajsa Warg, Renstiernas gata 20, 116 31 Stockholm, Sverige",
+    "sequence": "0",
+    "status": "CONFIRMED",
+    "summary": "Julfest Stockholm - Matlagning",
+    "transparency": "OPAQUE"
+  },
+  "1cj2o4qdhv2eqp6rs8kborqjun@google.com": {
+    "type": "VEVENT",
+    "params": [],
+    "start": "2018-11-07T16:00:00.000Z",
+    "end": "2018-11-07T18:00:00.000Z",
+    "dtstamp": "2018-10-29T09:30:58.000Z",
+    "organizer": {
+      "params": {
+        "CN": "mikael.falgard@nuway.se"
+      },
+      "val": "mailto:mikael.falgard@nuway.se"
+    },
+    "uid": "1cj2o4qdhv2eqp6rs8kborqjun@google.com",
+    "attendee": [
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "robin.merell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:robin.merell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "emil.bjorling@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:emil.bjorling@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "matteus.hemstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:matteus.hemstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "erik.haqvinsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:erik.haqvinsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "miriam.tisander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:miriam.tisander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "tobias.wallenborg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:tobias.wallenborg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "linnea.sandelin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:linnea.sandelin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "alexander.woldner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:alexander.woldner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mans.wikstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mans.wikstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mi.chu@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mi.chu@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "philip.svensson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:philip.svensson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mikael.jonsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.jonsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "mahmudul.hazra@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mahmudul.hazra@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "petter.djupfeldt@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:petter.djupfeldt@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "simon.evertsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:simon.evertsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mathias.nohall@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mathias.nohall@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "admin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:admin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "sebastian.valbere@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:sebastian.valbere@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mary.aberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mary.aberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "nina.stolze@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:nina.stolze@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "anton.forsberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:anton.forsberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "oscar.vonhoffmann@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:oscar.vonhoffmann@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mikael.falgard@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.falgard@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "roberto.garcia@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:roberto.garcia@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "isak.kogner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:isak.kogner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "patrick.lindell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:patrick.lindell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "johan.kinnander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:johan.kinnander@nuway.se"
+      }
+    ],
+    "created": "2018-10-11T08:22:52.000Z",
+    "description": "Förmodligen någon form av work shop eller diskussion kring arbetet kring profil/värderingar. ",
+    "lastmodified": "2018-10-24T06:24:32.000Z",
+    "location": "Sibyllegatan 46, Stockholm, Sverige",
+    "sequence": "0",
+    "status": "CONFIRMED",
+    "summary": "Komp.träff Stockholm - tema Nuway",
+    "transparency": "OPAQUE"
+  },
+  "4e271kog6m1anh6icccgu30195@google.com": {
+    "type": "VEVENT",
+    "params": [],
+    "start": "2018-10-24T06:00:00.000Z",
+    "end": "2018-10-24T07:30:00.000Z",
+    "dtstamp": "2018-10-29T09:30:58.000Z",
+    "organizer": {
+      "params": {
+        "CN": "mikael.falgard@nuway.se"
+      },
+      "val": "mailto:mikael.falgard@nuway.se"
+    },
+    "uid": "4e271kog6m1anh6icccgu30195@google.com",
+    "attendee": [
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "admin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:admin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "philip.svensson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:philip.svensson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "nina.stolze@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:nina.stolze@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "mans.wikstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mans.wikstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "robin.merell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:robin.merell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "patrick.lindell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:patrick.lindell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "isak.kogner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:isak.kogner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "mahmudul.hazra@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mahmudul.hazra@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "Fredrik Tingvall",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:fredrik.tingvall@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "anton.forsberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:anton.forsberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "petter.djupfeldt@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:petter.djupfeldt@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "johan.kinnander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:johan.kinnander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "emil.bjorling@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:emil.bjorling@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "roberto.garcia@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:roberto.garcia@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "simon.evertsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:simon.evertsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "fredrik.fiedler@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:fredrik.fiedler@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "alexander.woldner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:alexander.woldner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "tobias.wallenborg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:tobias.wallenborg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "mathias.nohall@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mathias.nohall@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "oscar.vonhoffmann@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:oscar.vonhoffmann@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "erik.haqvinsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:erik.haqvinsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "linnea.sandelin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:linnea.sandelin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "mi.chu@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mi.chu@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "miriam.tisander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:miriam.tisander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "sebastian.valbere@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:sebastian.valbere@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "mary.aberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mary.aberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "matteus.hemstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:matteus.hemstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mikael.falgard@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.falgard@nuway.se"
+      }
+    ],
+    "created": "2018-09-24T12:50:09.000Z",
+    "description": "Gemensam frukost på kontoret, passa på att snacka lite med Fredrik*2 som kommer upp en sväng. Återkommande event ca 1gång/månad.",
+    "lastmodified": "2018-10-24T05:32:52.000Z",
+    "location": "Sibyllegatan 46, 114 43 Stockholm, Sverige",
+    "sequence": "0",
+    "status": "CONFIRMED",
+    "summary": "Frukost Stockholm",
+    "transparency": "OPAQUE"
+  },
+  "0kotv8uhme7va847uski16hgh8@google.com": {
+    "type": "VEVENT",
+    "params": [],
+    "start": "2018-10-10T15:00:00.000Z",
+    "end": "2018-10-10T17:00:00.000Z",
+    "dtstamp": "2018-10-29T09:30:58.000Z",
+    "organizer": {
+      "params": {
+        "CN": "mikael.falgard@nuway.se"
+      },
+      "val": "mailto:mikael.falgard@nuway.se"
+    },
+    "uid": "0kotv8uhme7va847uski16hgh8@google.com",
+    "attendee": [
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "philip.svensson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:philip.svensson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "robin.merell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:robin.merell@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mikael.falgard@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mikael.falgard@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mary.aberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mary.aberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "nina.stolze@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:nina.stolze@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "oscar.vonhoffmann@nuway.se",
+          "X-NUM-GUESTS": 0,
+          "X-RESPONSE-COMMENT": "\"Tack f&ouml\\"
+        },
+        "val": "mailto:oscar.vonhoffmann@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "TENTATIVE",
+          "CN": "mahmudul.hazra@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mahmudul.hazra@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "mans.wikstrom@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mans.wikstrom@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "johan.kinnander@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:johan.kinnander@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "admin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:admin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "simon.evertsson@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:simon.evertsson@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "tobias.wallenborg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:tobias.wallenborg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "anton.forsberg@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:anton.forsberg@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "isak.kogner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:isak.kogner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "alexander.woldner@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:alexander.woldner@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "linnea.sandelin@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:linnea.sandelin@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "mathias.nohall@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:mathias.nohall@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "emil.bjorling@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:emil.bjorling@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "ACCEPTED",
+          "CN": "roberto.garcia@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:roberto.garcia@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "DECLINED",
+          "CN": "sebastian.valbere@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:sebastian.valbere@nuway.se"
+      },
+      {
+        "params": {
+          "CUTYPE": "INDIVIDUAL",
+          "ROLE": "REQ-PARTICIPANT",
+          "PARTSTAT": "NEEDS-ACTION",
+          "CN": "patrick.lindell@nuway.se",
+          "X-NUM-GUESTS": 0
+        },
+        "val": "mailto:patrick.lindell@nuway.se"
+      }
+    ],
+    "recurrenceid": "2018-10-10T15:00:00.000Z",
+    "created": "2018-09-20T12:08:48.000Z",
+    "description": "Vi kör en komp-träff på kontoret på onsdag där huvudnumret är en kort rapport från nordic.js från emil, linnea och kanske även från mary och måns! Formatet får vi väl försöka komma på under tiden, men om vi ses vid 17-17.30 och kör en timme eller två så tar vi det därifrån?",
+    "lastmodified": "2018-10-11T07:17:27.000Z",
+    "location": "Sibyllegatan 46, Stockholm, Sverige",
+    "sequence": "0",
+    "status": "CONFIRMED",
+    "summary": "Kompetensträff - tema nordic.js",
+    "transparency": "OPAQUE",
+    "recurrences": []
+  }
+}

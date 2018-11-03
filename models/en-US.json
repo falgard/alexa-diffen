@@ -1,50 +1,36 @@
 {
-    "interactionModel":{
-        "languageModel":{
-            "invocationName":"diffen games",
-            "types":[],
-            "intents":[
-                {
-                "name": "AMAZON.RepeatIntent",
-                "samples": []
-                },
-                {
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "diffen games",
+          "intents": [
+              {
                   "name": "AMAZON.CancelIntent",
                   "samples": []
-                },
-                {
+              },
+              {
                   "name": "AMAZON.HelpIntent",
                   "samples": []
-                },
-                {
+              },
+              {
                   "name": "AMAZON.StopIntent",
                   "samples": []
-                },
-                {
-                    "name":"NextGameIntent",
-                    "slots":[
-                    ],
-                    "samples":[
-                        "when is the next game"
-                    ]
-                },
-                {
-                    "name":"NextFootballGameIntent",
-                    "slots":[
-                    ],
-                    "samples":[
-                        "when is the next football game"
-                    ]
-                },
-                {
-                    "name":"NextHockeyGameIntent",
-                    "slots":[
-                    ],
-                    "samples":[
-                        "when is the next hockey game"
-                    ]
-                }
-            ]
-        }
-    }
+              },
+              {
+                  "name": "NextGameIntent",
+                  "slots": [
+                      {
+                          "name": "eventType",
+                          "type": "AMAZON.EventType"
+                      }
+                  ],
+                  "samples": [
+                      "when is the game",
+                      "when is the next {eventType} game",
+                      "who are we playing in the next {eventType} game"
+                  ]
+              }
+          ],
+          "types": []
+      }
+  }
 }

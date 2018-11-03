@@ -26,13 +26,6 @@
       "category": "SPORTS_GAMES",
       "distributionCountries": []
     },
-    "apis": {
-      "custom": {
-        "endpoint": {
-          "sourceDir": "lambda"
-        }
-      }
-    },
     "manifestVersion": "1.0"
   }
 }

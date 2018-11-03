@@ -1,0 +1,30 @@
+{
+  "name": "diffen-games",
+  "version": "1.0.0",
+  "description": "Ask alexa for the next DIF game",
+  "scripts": {
+    "sls-deploy": "AWS_PROFILE=mikael serverless deploy --stage dev",
+    "sls-deploy-prod": "npm run lint && npm run test && AWS_PROFILE=mikael serverless deploy --stage prod",
+    "test": "jest",
+    "lint": "eslint .",
+    "start": "npm run lint && babel-node dev.init.js",
+    "debug": "npm run lint && babel-node --inspect-brk dev.init.js"
+  },
+  "dependencies": {
+    "ask-sdk-core": "^2.1.0",
+    "ask-sdk-model": "^1.7.1",
+    "node-ical": "^0.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.8.0",
+    "express": "^4.16.4",
+    "jest": "^23.6.0",
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.23.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

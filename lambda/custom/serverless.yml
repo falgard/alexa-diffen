@@ -1,0 +1,25 @@
+service: diffen-games-alexa-skill
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, 'dev'} # default stage is dev, but you can override it.
+  region: eu-west-1 # Alexa is only available in eu-west-1 or us-east-1
+  memorySize: 256
+  cfLogs: true # AWS Cloudformation logging
+
+functions:
+  skill:
+    handler: index.handler # path to the alexa handler - {path}/{filename}.{handler function}
+    description: Next DIF game Alexa skill
+    events:
+      - alexaSkill: amzn1.ask.skill.12ce19cd-8072-43e6-982e-343845e0760e
+      
+plugins:
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: 'webpack.config.js'
+    includeModules: true
+    packager: 'npm'
