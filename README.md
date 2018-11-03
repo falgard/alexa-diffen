@@ -2,15 +2,15 @@
 Alexa skill to get info for DIF games
 
 ## Stack
-Lambdan är deployad med serverless och ingår inte i alexa ask konfigurationen. 
+The lambdan is deployed with serverless and is not a part of the alexa ask config. 
 
-## Prodsättning
-Deploya lambdan om ändringar är gjorda i den
+## Deploy
+To deploy the lambda (if that's where the changes are)
 ```
 nr sls-deploy
 ```
 
-Är det ändringar på modellen etc, deploya dom bitarna 
+If that's where the changes are in the model etc deploy that
 ```
 ask deploy
 ```
